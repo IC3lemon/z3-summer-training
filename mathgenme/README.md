@@ -19,7 +19,7 @@ solver = Solver()
 
 password = [BitVec(f"pwd{i}",8) for i in range(48)]
 
-license_key = bytearray.fromhex("04b2fc467e104c0c610e3bf0a009a9f3621905df1997ce0b6cd6a3ea68af4d4deaaf024906f7b259ba32035ac4dad586")
+license_key = bytearray(bytes.fromhex("04b2fc467e104c0c610e3bf0a009a9f3621905df1997ce0b6cd6a3ea68af4d4deaaf024906f7b259ba32035ac4dad586"))
 key = [int(x) for x in license_key]
 v5 = [BitVec(f"key{i:}",8) for i in range(48)]
 
